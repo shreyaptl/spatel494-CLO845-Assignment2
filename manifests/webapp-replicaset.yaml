@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: webapp-rs
+  namespace: webapp
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: employees
+  template:
+    metadata:
+      labels:
+        app: employees
+    spec:
+      imagePullSecrets:
+        - name: ecr-secret
+      containers:
+        - name: webapp
+          image: 835512929652.dkr.ecr.us-east-1.amazonaws.com/webapp-image-repo:latest
+          ports:
+            - containerPort: 8080
+          env:
+            - name: DBHOST
+              value: "mysql-service.mysql.svc.cluster.local"  # Internal DNS for MySQL service
+            - name: DBUSER
+              value: "root"
+            - name: DBPWD
+              value: "rootpassword"  # Replace with secure password
+            - name: DATABASE
+              value: "employees"
+            - name: DBPORT
+              value: "3306"
+            - name: APP_COLOR
+              value: "lime"  # Set your preferred color
