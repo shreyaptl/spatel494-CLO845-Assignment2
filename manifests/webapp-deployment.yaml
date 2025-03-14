@@ -22,14 +22,14 @@ spec:
             - containerPort: 8080
           env:
             - name: DBHOST
-              value: "mysql-service.mysql.svc.cluster.local"  # Internal DNS for MySQL service
+              value: "mysql-service.mysql.svc.cluster.local"
             - name: DBUSER
               value: "root"
             - name: DBPWD
-              value: "rootpassword"  # Replace with secure password
+              value: "rootpassword" 
             - name: DATABASE
               value: "employees"
             - name: DBPORT
               value: "3306"
             - name: APP_COLOR
-              value: "lime"  # Set your preferred color
+              value: "lime"
