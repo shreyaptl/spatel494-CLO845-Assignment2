@@ -2,7 +2,7 @@ name: Push the container images to ECR
 on: 
   pull_request:
     branches:
-      - main
+      - master
     types:
       - closed
 jobs:
