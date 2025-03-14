@@ -11,7 +11,7 @@ spec:
   containers:
     - name: mysql
       image: 051034484218.dkr.ecr.us-east-1.amazonaws.com/clo835_sql:latest
-      imagePullPolicy: Never
+      imagePullPolicy: IfNotPresent
       ports:
         - containerPort: 3306
       env:
