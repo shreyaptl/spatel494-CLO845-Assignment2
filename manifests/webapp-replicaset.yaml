@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: ReplicaSet
 metadata:
-  name: webapp-rs
+  name: webapp-replicaset
   namespace: webapp
 spec:
   replicas: 3
