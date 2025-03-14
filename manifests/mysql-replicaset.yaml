@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: ReplicaSet
 metadata:
-  name: mysql-rs
+  name: mysql-ReplicaSet
   namespace: mysql
 spec:
   replicas: 1
