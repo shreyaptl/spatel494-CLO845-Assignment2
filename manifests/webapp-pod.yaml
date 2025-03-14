@@ -10,7 +10,7 @@ spec:
     - name: ecr-secret
   containers:
     - name: webapp
-      image: 835512929652.dkr.ecr.us-east-1.amazonaws.com/webapp-image-repo:latest
+      image: 051034484218.dkr.ecr.us-east-1.amazonaws.com/clo835_app:latest
       ports:
         - containerPort: 8080
       env:
