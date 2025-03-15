@@ -1,4 +1,4 @@
-name: Push the container images to ECR 
+name: Push the container images to ECR
 on: 
   push:
     branches:
